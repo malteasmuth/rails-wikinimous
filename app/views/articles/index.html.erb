@@ -1,7 +1,21 @@
-<h1>All articles</h1>
+  <nav class="navbar navbar-light bg-light">
+    <div class="navbar-nav d-flex">
+      <div class="navbar-header d-flex-inline items-align-center">
+        <a class="btn btn-primary" href="articles" role="button">Wikinimous</a>
+        <a class="btn btn-primary" href="articles/new" role="button">new article</a>
+      </div>
+    </div>
+  </nav>
 
-<ul>
-  <% @articles.each do |article| %>
-  <li><%= link_to article.title, article_path(article) %></li>
-  <% end %>
-</ul>
+<div class="container d-flex justify-content-center">
+  <div class="row col-8">
+    <div class="">
+        <% @articles.each do |article| %>
+          <div>
+            <h2><%= link_to article.title, article_path(article) %></h2>
+            <p><%=article.content%></p>
+          </div>
+        <% end %>
+    </div>
+  </div>
+</div>

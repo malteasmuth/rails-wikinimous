@@ -9,7 +9,7 @@
 require 'faker'
 require_relative '../app/models/article.rb'
 
-10.times do
-  article = Article.new(title: Faker::Movies::LordOfTheRings.quote, content: Faker::Movies::StarWars.planet)
+50.times do
+  article = Article.new(title: Faker::Books::Lovecraft.tome, content: Faker::Books::Lovecraft.paragraph)
   article.save
 end
